@@ -5,52 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>trade</title>
     <link rel="stylesheet" href="style/style.css" />
-    <script
-      src="https://kit.fontawesome.com/a101e444f0.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/a101e444f0.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1>Выберите способ заработка</h1>
-    <div class="container move-up">
-      <details class="item-1">
-        <summary>Самостоятельно торговать</summary>
-        <div>
-          <p>
-            Если вы ищите пассивный дохлж и предпочитаете, чтобы деньги для вас
-            зарабатывал то, кто умеет это делать, тогда попробуйте ЛАММ.
-          </p>
-          <p>
-            ЛАММ - это сервис копирования сделок успешных трейдоров. Доходность
-            ни чем не ограничена!
-          </p>
-          <h2>Как это работает</h2>
-          <ul>
-            <li>Вы выбираете управляющего из рейтинга по фильтру Option</li>
-            <li>Подключайте свой счет к счету управляющего</li>
-            <li>На вашем счете начинается копирование сделок</li>
-            <li>
-              Обратите внимание, что вы не перечисляете свои деньги
-              управляющему. Ваши средства остаются на вашем счете.
-            </li>
-            <li>
-              Вы можете подключиться к нескольким управляющим одновременно
-            </li>
-            <li>Вы можете отключиться от управляющих в любой момент.</li>
-          </ul>
-          <button>Открыть счет</button>
-        </div>
-      </details>
 
-      <details class="item-2">
-        <summary>Инвестировать</summary>
-        <div>контент отсутствует</div>
-      </details>
+    <div class="main-wrapper">
+      <!-- light background (#eaeaea) -->
+      <input id="one" class="one" type="radio" name="layout" checked />
+      <label for="one" class="settings-box-element"></label>
+      <!-- light background (#eaeaea) -->
+      <input id="two" class="two" type="radio" name="layout" checked />
+      <label for="two" class="settings-box-element"></label>
+      <!-- dark background (#494949) -->
+      <input id="three" class="three" type="radio" name="layout" />
+      <label for="three" class="settings-box-element"></label>
 
-      <details class="item-3">
-        <summary>Привлекать инвесторов</summary>
-        <div>контент отсутствует</div>
-      </details>
+      <div class="container">
+        <details class="item-1">
+          <summary>Самостоятельно торговать</summary>
+          <div>
+            <p>
+              Если вы ищите пассивный дохлж и предпочитаете, чтобы деньги для вас зарабатывал то,
+              кто умеет это делать, тогда попробуйте ЛАММ.
+            </p>
+            <p>
+              ЛАММ - это сервис копирования сделок успешных трейдоров. Доходность ни чем не
+              ограничена!
+            </p>
+            <h2>Как это работает</h2>
+            <ul>
+              <li>Вы выбираете управляющего из рейтинга по фильтру Option</li>
+              <li>Подключайте свой счет к счету управляющего</li>
+              <li>На вашем счете начинается копирование сделок</li>
+              <li>
+                Обратите внимание, что вы не перечисляете свои деньги управляющему. Ваши средства
+                остаются на вашем счете.
+              </li>
+              <li>
+                Вы можете подключиться к нескольким управляющим одновременно
+              </li>
+              <li>Вы можете отключиться от управляющих в любой момент.</li>
+            </ul>
+            <button>Открыть счет</button>
+          </div>
+        </details>
+
+        <details class="item-2">
+          <summary>Инвестировать</summary>
+          <div>контент отсутствует</div>
+        </details>
+
+        <details class="item-3">
+          <summary>Привлекать инвесторов</summary>
+          <div>контент отсутствует</div>
+        </details>
+      </div>
     </div>
   </body>
 </html>

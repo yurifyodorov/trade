@@ -1,15 +1,21 @@
 body {
-  height: 100vh;
+  height: min-content;
   margin: 0;
-  background-image: url("../img/bcg.jpg");
+  background-image: url('../img/bcg.jpg');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative;
 }
 
+input[type='checkbox'],
+input[type='radio'] {
+  position: absolute;
+  visibility: hidden;
+}
+
 body::before {
-  content: "";
+  content: '';
   background-color: rgba($color: black, $alpha: 0.5);
   position: absolute;
   top: 0;
@@ -24,7 +30,7 @@ h1 {
   z-index: 99;
   color: white;
   margin: 0;
-  line-height: 100px;
+  padding: 20px;
 }
 
 h2,
@@ -35,7 +41,8 @@ button {
 }
 
 .container {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 ul {
@@ -58,27 +65,27 @@ li::before {
 }
 
 li:nth-child(1)::before {
-  content: "1";
+  content: '1';
 }
 
 li:nth-child(2)::before {
-  content: "2";
+  content: '2';
 }
 
 li:nth-child(3)::before {
-  content: "3";
+  content: '3';
 }
 
 li:nth-child(4)::before {
-  content: "4";
+  content: '4';
 }
 
 li:nth-child(5)::before {
-  content: "5";
+  content: '5';
 }
 
 li:nth-child(6)::before {
-  content: "6";
+  content: '6';
 }
 
 summary {
@@ -113,20 +120,20 @@ details summary::after {
 }
 
 .item-1 summary::after {
-  content: url("../img/icon-1.jpg");
+  content: url('../img/icon-1.jpg');
 }
 
 .item-2 summary::after {
-  content: url("../img/icon-2.jpg");
+  content: url('../img/icon-2.jpg');
 }
 
 .item-3 summary::after {
-  content: url("../img/icon-3.jpg");
+  content: url('../img/icon-3.jpg');
 }
 
 details summary::before {
-  font-family: "FontAwesome";
-  content: "\f107";
+  font-family: 'FontAwesome';
+  content: '\f107';
   position: absolute;
   top: 18px;
   right: 30px;
@@ -135,8 +142,8 @@ details summary::before {
 }
 
 details[open] summary::before {
-  font-family: "FontAwesome";
-  content: "\f106";
+  font-family: 'FontAwesome';
+  content: '\f106';
 }
 
 details summary::-webkit-details-marker::before {
@@ -154,18 +161,13 @@ button {
   color: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 100px;
-  }
-
-  /* смещение */
-  .move-up {
-    position: fixed;
-    top: 0;
+    transition: height 0.3s linear;
+    position: absolute;
   }
 
   summary {
@@ -176,6 +178,13 @@ button {
     text-align: center;
     padding-top: 50%;
     position: relative;
+  }
+
+  summary {
+    width: 270px;
+    height: 270px;
+    border: 20px solid rgba(245, 245, 247, 0);
+    border-radius: 50%;
   }
 
   details summary::before {
@@ -194,5 +203,51 @@ button {
 
   details div {
     display: hidden;
+  }
+
+  // tests
+
+  .main-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: height 0.3s linear;
+  }
+
+  .settings-box-element {
+    z-index: 10;
+  }
+
+  .settings-btn:checked ~ .layout-buttons {
+    right: 30px;
+    background-color: yellow;
+  }
+
+  input[type='radio']:checked + label {
+    border: 0.5px solid black;
+  }
+
+  /* кнопка 1 */
+  .one + label,
+  .two + label,
+  .three + label {
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .one:checked ~ .container {
+    background: #494949;
+  }
+
+  .two:checked ~ .container {
+    background: orange;
+  }
+
+  .three:checked ~ .container {
+    background: pink;
   }
 }
