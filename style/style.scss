@@ -103,7 +103,7 @@ details div {
   padding: 20px;
   padding-bottom: 40px;
   border-radius: 5px;
-  background-color: rgba($color: #f5f5f7, $alpha: 0.8);
+  background-color: rgba($color: #f5f5f7, $alpha: 0.99);
   margin-bottom: 20px;
   z-index: 99;
 }
@@ -164,6 +164,10 @@ button {
 }
 
 @media (min-width: 769px) {
+  h1 {
+    line-height: 200px;
+  }
+
   .container {
     width: 100%;
     display: flex;
@@ -226,10 +230,14 @@ button {
 
   input:checked ~ .container {
     background-color: #fff;
-    transform: translate(0, -180px);
+    transform: translate(0, -370px);
     padding-top: 10px;
     display: flex;
     align-items: center;
+
+    h1 {
+      display: none;
+    }
 
     summary {
       width: min-content;

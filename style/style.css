@@ -111,7 +111,7 @@ details div {
   padding: 20px;
   padding-bottom: 40px;
   border-radius: 5px;
-  background-color: rgba(245, 245, 247, 0.8);
+  background-color: rgba(245, 245, 247, 0.99);
   margin-bottom: 20px;
   z-index: 99;
 }
@@ -172,6 +172,9 @@ button {
 }
 
 @media (min-width: 769px) {
+  h1 {
+    line-height: 200px;
+  }
   .container {
     width: 100%;
     display: -webkit-box;
@@ -239,8 +242,8 @@ button {
   }
   input:checked ~ .container {
     background-color: #fff;
-    -webkit-transform: translate(0, -180px);
-            transform: translate(0, -180px);
+    -webkit-transform: translate(0, -370px);
+            transform: translate(0, -370px);
     padding-top: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -248,6 +251,9 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  input:checked ~ .container h1 {
+    display: none;
   }
   input:checked ~ .container summary {
     width: -webkit-min-content;
