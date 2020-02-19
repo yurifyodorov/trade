@@ -2,8 +2,8 @@
 
 const elem = document.querySelector('details');
 const label = document.querySelector('label');
-label.onclick = open;
+label.onclick = openDatails;
 
-function open() {
+function openDatails() {
   elem.setAttribute('open', 'open');
 }

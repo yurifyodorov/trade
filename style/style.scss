@@ -203,10 +203,6 @@ button {
     text-align: center;
   }
 
-  details div {
-    display: hidden;
-  }
-
   .main-wrapper {
     position: relative;
     width: 100%;
@@ -226,10 +222,6 @@ button {
     height: 250px;
     border-radius: 50%;
     cursor: pointer;
-  }
-
-  input ~ .container {
-    background: transparent;
   }
 
   input:checked ~ .container {
